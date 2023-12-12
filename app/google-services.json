@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "645848091394",
+    "project_id": "quickmeal-7f7fa",
+    "storage_bucket": "quickmeal-7f7fa.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:645848091394:android:57090c018fcf10be08101b",
+        "android_client_info": {
+          "package_name": "com.example.QuickMeal"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyARlCzvINX8n0rh_AtpuqBVTb5WEcstVRU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
