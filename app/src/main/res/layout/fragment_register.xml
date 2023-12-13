@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto">
@@ -38,27 +39,17 @@
             android:orientation="horizontal"
             app:layout_constraintGuide_percent="0.09" />
 
-        <ImageView
-            android:id="@+id/imageView4"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:scaleType="centerCrop"
-            android:src="@drawable/blury_background"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/textView3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="40dp"
-            android:fontFamily="@font/poppins_bold_italic"
+            android:fontFamily="sans-serif"
             android:text="Let's get started!"
             android:textColor="#090909"
             android:textSize="35dp"
+            app:layout_constraintEnd_toStartOf="@+id/guideline7"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@+id/guideline2" />
 
@@ -66,27 +57,26 @@
             android:id="@+id/gotologinPageRegi"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="40dp"
-            android:layout_marginTop="10dp"
-            android:fontFamily="@font/poppins"
+            android:layout_marginBottom="10dp"
+            android:fontFamily="sans-serif"
             android:text="Already have an account?Login"
             android:textSize="19dp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView3" />
+            app:layout_constraintBottom_toTopOf="@+id/textView3"
+            app:layout_constraintEnd_toEndOf="parent" />
 
         <EditText
             android:id="@+id/FirstName"
             style="@style/editText"
             android:layout_width="0dp"
             android:layout_height="50dp"
-            android:layout_marginTop="40dp"
+            android:layout_marginTop="75dp"
             android:fontFamily="@font/poppins"
             android:hint="Type Your First name"
             android:inputType="text"
             app:layout_constraintEnd_toStartOf="@+id/guideline7"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="@+id/guideline8"
-            app:layout_constraintTop_toBottomOf="@+id/gotologinPageRegi" />
+            app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
         <EditText
             android:id="@+id/LastName"
@@ -165,7 +155,7 @@
             android:layout_width="0dp"
             android:layout_height="60dp"
             android:layout_marginTop="50dp"
-            android:backgroundTint="#004FEE"
+            android:backgroundTint="#984955"
             android:fontFamily="@font/poppins"
             android:includeFontPadding="true"
             android:paddingLeft="50dp"

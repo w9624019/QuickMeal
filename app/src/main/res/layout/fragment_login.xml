@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto">
@@ -25,31 +26,19 @@
         android:orientation="horizontal"
         app:layout_constraintGuide_percent="0.16" />
 
-    <ImageView
-        android:id="@+id/imageView4"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:scaleType="centerCrop"
-        android:src="@drawable/blury_background"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="40dp"
-        android:fontFamily="@font/poppins_bold_italic"
+        android:fontFamily="sans-serif"
         android:text="Let's Login!"
         android:textColor="#090909"
         android:textSize="35dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/guideline2" />
-
+        app:layout_constraintBottom_toTopOf="@+id/guideline2"
+        app:layout_constraintEnd_toStartOf="@+id/guideline7"
+        app:layout_constraintStart_toStartOf="parent" />
 
 
     <TextView
@@ -69,23 +58,23 @@
         style="@style/editText"
         android:layout_width="0dp"
         android:layout_height="50dp"
-        android:layout_marginTop="120dp"
+        android:layout_marginTop="20dp"
         android:fontFamily="@font/poppins"
         android:hint="Type Your email"
         android:inputType="textEmailAddress"
         app:layout_constraintEnd_toStartOf="@+id/guideline7"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/guideline8"
-        app:layout_constraintTop_toBottomOf="@+id/register" />
+        app:layout_constraintTop_toBottomOf="@+id/ForgotPass" />
 
     <EditText
+        android:id="@+id/passwordforlogin"
+        style="@style/editText"
         android:layout_width="0dp"
         android:layout_height="50dp"
         android:layout_marginTop="30dp"
         android:fontFamily="@font/poppins"
-        style="@style/editText"
         android:hint="Type Your Password"
-        android:id="@+id/passwordforlogin"
         android:inputType="textPassword"
         app:layout_constraintEnd_toStartOf="@+id/guideline7"
         app:layout_constraintStart_toStartOf="@+id/guideline8"
@@ -95,12 +84,12 @@
         android:id="@+id/ForgotPass"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="120dp"
         android:fontFamily="@font/poppins_italic"
         android:text="Forgot Password?"
         android:textSize="20dp"
-        app:layout_constraintStart_toStartOf="@+id/guideline8"
-        app:layout_constraintTop_toBottomOf="@+id/passwordforlogin" />
+        app:layout_constraintEnd_toStartOf="@+id/guideline7"
+        app:layout_constraintTop_toBottomOf="@+id/register" />
 
 
     <com.github.leandroborgesferreira.loadingbutton.customViews.CircularProgressButton
@@ -108,14 +97,14 @@
         android:layout_width="200dp"
         android:layout_height="60dp"
         android:layout_marginTop="40dp"
-        android:backgroundTint="#004FEE"
+        android:backgroundTint="#AA4A4A"
         android:fontFamily="@font/poppins"
         android:text="Login"
         android:textSize="20sp"
         app:layout_constraintEnd_toStartOf="@+id/guideline7"
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="@+id/guideline8"
-        app:layout_constraintTop_toBottomOf="@+id/ForgotPass" />
+        app:layout_constraintTop_toBottomOf="@+id/passwordforlogin" />
 
 
 

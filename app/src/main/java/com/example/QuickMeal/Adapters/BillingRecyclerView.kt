@@ -19,7 +19,7 @@ binding.apply {
     Glide.with(itemView).load(product.product.img).into(imageCartProduct)
     tvProductCartName.text=product.product.name
     tvProductCartPrice.text=(product.quantity.toInt()*product.product.price.toLong()).toString()
-    tvBillingProductQuantity.text=product.quantity.toString()
+    tvBillingProductQuantity.text="Quantity -" +product.quantity.toString()
 }
 
 

@@ -7,68 +7,62 @@
     app:cardElevation="0dp">
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="match_parent">
-
-        <View
-            android:id="@+id/topLine"
-            android:layout_width="0dp"
-            android:layout_height="1dp"
-            android:layout_marginTop="10dp"
-            android:background="@color/white"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"/>
 
         <ImageView
             android:id="@+id/imageCartProduct"
-            android:layout_width="80dp"
-            android:layout_height="75dp"
-            android:layout_marginBottom="5dp"
-            app:layout_constraintBottom_toTopOf="@+id/topLine"
+            android:layout_width="114dp"
+            android:layout_height="108dp"
+            android:scaleType="fitCenter"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            android:scaleType="centerCrop"
-            android:src="@color/g_blue"/>
+            app:layout_constraintTop_toTopOf="parent" />
+
 
         <TextView
             android:id="@+id/tvProductCartName"
-            android:layout_width="140dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
+            android:layout_weight="1"
             android:fontFamily="@font/poppins"
             android:text="Chair"
+            android:layout_marginTop="8dp"
             android:textColor="@color/black"
-            android:textSize="15sp"
+            android:textSize="12sp"
             android:textStyle="bold"
-            app:layout_constraintStart_toEndOf="@id/imageCartProduct"
-            app:layout_constraintTop_toTopOf="@id/imageCartProduct"
-            android:lines="1" />
-
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageCartProduct" />
 
 
         <TextView
             android:id="@+id/tvProductCartPrice"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/poppins"
-            android:text="$50"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/poppins_bold_italic"
+            android:text="$1600"
             android:textColor="@color/black"
-            android:textSize="10sp"
-            android:textStyle="bold"
-            app:layout_constraintStart_toStartOf="@id/tvProductCartName"
-            app:layout_constraintTop_toBottomOf="@id/tvProductCartName"/>
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/imageCartProduct"
+            app:layout_constraintTop_toBottomOf="@+id/tvProductCartName" />
 
         <TextView
             android:id="@+id/tvBillingProductQuantity"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginBottom="15dp"
+            android:fontFamily="@font/poppins_bold_italic"
+            android:text="Quantity-2"
+            android:textColor="@color/black"
+            android:textSize="12sp"
+            android:layout_marginTop="5dp"
             app:layout_constraintBottom_toBottomOf="parent"
-            android:text="1"
-            android:layout_marginEnd="5dp"/>
-
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/imageCartProduct"
+            app:layout_constraintTop_toBottomOf="@+id/tvProductCartPrice" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

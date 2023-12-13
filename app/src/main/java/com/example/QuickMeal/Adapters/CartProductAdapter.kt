@@ -25,7 +25,7 @@ class CartProductAdapter : RecyclerView.Adapter<CartProductAdapter.CartProductVi
                 Glide.with(itemView).load(cartProduct.product.img).into(ImageCartProducts)
                 ProductCartName.text=cartProduct.product.name.toString()
 //                Log.d("recyclerView", "bind: " + product.product_name)
-                ProductRestroNAme.text=cartProduct.product.category
+                ProductRestroNAme.text="Sold by "+cartProduct.product.category
                 ProductCartPrice.text="Price- $"+cartProduct.product.price.toString()
                 quantity.text=cartProduct.quantity.toString()
 

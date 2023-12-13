@@ -33,7 +33,7 @@ import com.example.agrishop.Data.Order.OrderStatus
 import com.google.android.material.snackbar.Snackbar
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.flow.collectLatest
-const val CHANNEL_ID="channel_id"
+
 @AndroidEntryPoint
 class BillingFragment:Fragment(R.layout.fragment_billing) {
     private lateinit var binding:FragmentBillingBinding
@@ -59,14 +59,9 @@ class BillingFragment:Fragment(R.layout.fragment_billing) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        var builder =NotificationCompat.Builder(requireContext(), CHANNEL_ID)
-//        builder.setSmallIcon(R.drawable.playstore)
-//            .setContentTitle("Order Placed Successfully")
-//            .setPriority(NotificationCompat.PRIORITY_HIGH)
-//        with(NotificationManagerCompat.from(requireContext()){
-//                noti
-//        }
-
+binding.imageCloseBilling.setOnClickListener {
+    findNavController().navigateUp()
+}
         binding.imageAddAddress.setOnClickListener {
             findNavController().navigate(R.id.action_billingFragment_to_addAddressFragment)
         }

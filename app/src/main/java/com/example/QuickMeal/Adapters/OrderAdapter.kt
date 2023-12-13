@@ -10,6 +10,9 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.QuickMeal.databinding.OrderShowerRecyclerviewBinding
 
 import com.example.agrishop.Data.Order.Order
+import java.util.Calendar
+import java.util.Date
+import kotlin.random.Random
 
 
 class OrderAdapter : RecyclerView.Adapter<OrderAdapter.OrderViewHolder>() {
@@ -18,9 +21,13 @@ class OrderAdapter : RecyclerView.Adapter<OrderAdapter.OrderViewHolder>() {
         fun bind(order: Order) {
             Log.d("Order Adapter", order.toString())
             binding.apply {
-                tvOrderId.text = order.orderId.toString()
-                tvOrderDate.text = order.date.toString() // Corrected line
+                tvOrderId.text = "Your Order id - "+order.orderId.toString()
+                tvOrderDate.text ="Your Order date - "+ order.date.toString() // Corrected line
 
+
+                // Format the new date as a string
+                val randomNumber = Random.nextInt(1, 60)
+                    deliveryDate.text="You will get your food in ${randomNumber} minutes "
 
             }
         }
@@ -63,6 +70,7 @@ class OrderAdapter : RecyclerView.Adapter<OrderAdapter.OrderViewHolder>() {
     }
 
 }
+
 //
 //
 //    private fun navigate(product: Address, view: View) {

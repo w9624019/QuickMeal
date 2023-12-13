@@ -39,6 +39,9 @@ class ChangeLocationFragment:Fragment(R.layout.change_address) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         setUpRV()
+        binding.close.setOnClickListener {
+            findNavController().navigateUp()
+        }
 
         changeLocationAdapter.onClick={
             val b=Bundle()

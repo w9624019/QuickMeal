@@ -11,10 +11,10 @@
         android:layout_height="match_parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.5">
+       >
 
 
         <View
@@ -29,14 +29,15 @@
 
         <ImageView
             android:id="@+id/ImageCartProducts"
-            android:layout_width="80dp"
-            android:layout_height="75dp"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
             android:layout_marginBottom="5dp"
             android:scaleType="centerCrop"
             android:src="@color/g_blue"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.307" />
 
         <TextView
             android:id="@+id/ProductCartName"
@@ -82,20 +83,19 @@
             android:id="@+id/minus"
             android:layout_width="30dp"
             android:layout_height="30dp"
+            android:layout_marginTop="10dp"
             android:src="@drawable/ic_minus"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="@+id/guideline5"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ImageCartProducts" />
 
         <ImageView
             android:id="@+id/plus"
             android:layout_width="32dp"
             android:layout_height="32dp"
-            android:layout_marginEnd="1dp"
             android:src="@drawable/ic_plus"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintBottom_toBottomOf="@+id/quantity"
+            app:layout_constraintEnd_toEndOf="@+id/ImageCartProducts"
+            app:layout_constraintTop_toTopOf="@+id/quantity" />
 
 
         <TextView
@@ -105,17 +105,17 @@
             android:text="1"
             android:textColor="@color/black"
             android:textSize="18sp"
-            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintBottom_toBottomOf="@+id/minus"
             app:layout_constraintEnd_toStartOf="@+id/plus"
             app:layout_constraintStart_toEndOf="@+id/minus"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="@+id/minus" />
 
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/guideline5"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            app:layout_constraintGuide_percent="0.74" />
+            app:layout_constraintGuide_percent="0.96" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
